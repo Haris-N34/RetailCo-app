@@ -173,10 +173,10 @@ export function HomePage() {
           />
           <div className="pb-12 sm:pb-16">
             <Suspense
-            fallback={
-              <div className="h-[70vh] rounded-[32px] border border-white/70 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.96),rgba(240,232,223,0.92)_40%,rgba(185,205,204,0.32)_100%)]" />
-            }
-          >
+              fallback={
+                <div className="h-[70vh] rounded-[32px] border border-white/70 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.96),rgba(240,232,223,0.92)_40%,rgba(185,205,204,0.32)_100%)]" />
+              }
+            >
               <HeroScene />
             </Suspense>
           </div>
@@ -185,8 +185,8 @@ export function HomePage() {
 
       <section className="mt-28 px-4 pb-14 pt-14 sm:mt-44 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl space-y-8">
-          <div className="grid gap-6 lg:grid-cols-[1.15fr,0.85fr] lg:items-center">
-            <div className="relative overflow-hidden rounded-[34px] border border-[rgba(155,178,178,0.18)] shadow-[0_24px_70px_rgba(61,75,80,0.08)]">
+          <div className="grid w-full gap-6 lg:grid-cols-[1.15fr,0.85fr] lg:items-center">
+            <div className="relative w-full min-w-0 overflow-hidden rounded-[34px] border border-[rgba(155,178,178,0.18)] shadow-[0_24px_70px_rgba(61,75,80,0.08)]">
               <img
                 src={featured[0].image}
                 alt={featured[0].name}
@@ -278,8 +278,8 @@ export function HomePage() {
 
       <section className="px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-6 lg:grid-cols-[1.05fr,0.95fr] lg:items-center">
-            <div className="overflow-hidden rounded-[34px] border border-[rgba(216,184,171,0.18)] shadow-[0_24px_70px_rgba(61,75,80,0.08)]">
+          <div className="grid w-full gap-6 lg:grid-cols-[1.05fr,0.95fr] lg:items-center">
+            <div className="w-full min-w-0 overflow-hidden rounded-[34px] border border-[rgba(216,184,171,0.18)] shadow-[0_24px_70px_rgba(61,75,80,0.08)]">
               <img src={products[1].image} alt={products[1].name} className="h-[380px] w-full object-cover sm:h-[520px]" />
             </div>
             <div className="space-y-6 rounded-[32px] bg-[linear-gradient(135deg,rgba(155,178,178,0.18),rgba(255,248,240,0.82)_38%,rgba(216,184,171,0.22))] p-8 shadow-[0_20px_50px_rgba(61,75,80,0.06)]">

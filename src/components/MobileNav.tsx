@@ -11,7 +11,7 @@ const items = [
 
 export function MobileNav() {
   return (
-    <nav className="fixed inset-x-3 bottom-3 z-50 mx-auto flex w-auto max-w-md items-center justify-between rounded-full border border-white/70 bg-[rgba(61,80,84,0.88)] px-2 py-2 text-white shadow-[0_18px_50px_rgba(61,75,80,0.28)] backdrop-blur-xl sm:inset-x-4 sm:bottom-4 sm:px-3 lg:hidden">
+    <nav className="fixed bottom-3 left-1/2 z-50 mx-auto flex w-[calc(100%-1.5rem)] max-w-md -translate-x-1/2 items-center justify-between rounded-full border border-white/70 bg-[rgba(61,80,84,0.88)] px-2 py-2 text-white shadow-[0_18px_50px_rgba(61,75,80,0.28)] backdrop-blur-xl sm:bottom-4 sm:w-[calc(100%-2rem)] sm:px-3 lg:hidden">
       {items.map(({ to, label, icon: Icon }) => (
         <NavLink
           key={to}
