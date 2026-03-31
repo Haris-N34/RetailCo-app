@@ -95,12 +95,9 @@ export const useRetailStore = create<RetailState>()(
     {
       name: 'retailco-app-state',
       partialize: (state) => ({
-        user: state.user,
-        isAuthenticated: state.isAuthenticated,
         favorites: state.favorites,
         recentlyViewed: state.recentlyViewed,
         cartCount: state.cartCount,
-        signUpDraft: state.signUpDraft,
       }),
     },
   ),
