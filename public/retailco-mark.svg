@@ -1,0 +1,42 @@
+<svg width="800" height="720" viewBox="0 0 800 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="720" fill="#FAFAF8" />
+  <path
+    d="M503.953 84C448.617 51.919 366.967 44.212 293.885 63.661C226.649 81.558 169.442 119.837 134.452 172.844C106.842 214.664 93.461 265.373 97.472 314.587C101.709 366.587 124.776 409.733 162.765 435.68C196.779 458.918 240.597 470.55 291.354 471.4C351.056 472.399 409.638 459.176 469.511 436.301"
+    stroke="#13589A"
+    stroke-width="13"
+    stroke-linecap="round"
+  />
+  <path
+    d="M288.723 154.738C342.195 153.131 385.024 154.1 417.292 164.117C453.911 175.485 473.389 203.114 472.283 237.559C471.2 271.28 450.884 298.519 412.643 315.274C387.157 326.447 356.984 332.098 315.126 335.949L502.253 469.714"
+    stroke="#13589A"
+    stroke-width="13"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path d="M285.322 156.203L291.863 385.669" stroke="#13589A" stroke-width="13" stroke-linecap="round" />
+  <path
+    d="M299.451 237.333C352.188 237.333 389.771 236.129 410.728 229.562C428.092 224.121 437.399 212.84 437.399 195.781C437.399 179.456 429.099 167.922 412.797 161.779C390.366 153.327 348.724 152.505 291.815 152.505"
+    stroke="#13589A"
+    stroke-width="13"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M497.366 469.672C507.785 475.766 522.162 475.054 539.386 466.086"
+    stroke="#13589A"
+    stroke-width="8"
+    stroke-linecap="round"
+  />
+  <text
+    x="400"
+    y="640"
+    text-anchor="middle"
+    fill="#161616"
+    font-family="'Cormorant Garamond', 'Times New Roman', serif"
+    font-size="124"
+    font-weight="500"
+    letter-spacing="0"
+  >
+    RetailCo
+  </text>
+</svg>
