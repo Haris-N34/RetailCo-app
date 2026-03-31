@@ -44,13 +44,13 @@ export function ProductCard({
 
       <div className="space-y-4 p-3 pb-2 pt-4">
         <div className="flex items-start justify-between gap-4">
-          <div>
+          <div className="min-w-0">
             <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--color-ink-soft)]">
               {product.collection}
             </p>
             <h3 className="mt-2 text-lg font-semibold text-[color:var(--color-ink)]">{product.name}</h3>
           </div>
-          <p className="text-sm font-semibold text-[color:var(--color-ink)]">{formatPrice(product.price)}</p>
+          <p className="shrink-0 text-sm font-semibold text-[color:var(--color-ink)]">{formatPrice(product.price)}</p>
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -64,11 +64,11 @@ export function ProductCard({
           ))}
         </div>
 
-        <div className="flex items-center justify-between gap-3 text-sm text-[color:var(--color-ink-soft)]">
-          <p>{product.inventory > 10 ? 'Available online and in select stores' : `${product.inventory} left in matching sizes`}</p>
+        <div className="flex flex-col gap-3 text-sm text-[color:var(--color-ink-soft)] sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-[24rem]">{product.inventory > 10 ? 'Available online and in select stores' : `${product.inventory} left in matching sizes`}</p>
           <button
             onClick={onQuickView}
-            className="btn-primary px-4 py-2 text-sm font-semibold"
+            className="btn-primary w-full px-4 py-2 text-sm font-semibold sm:w-auto"
           >
             <Plus size={15} />
             View Details

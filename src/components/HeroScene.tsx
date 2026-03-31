@@ -44,9 +44,9 @@ export function HeroScene() {
   const textParallax = useTransform(scrollYProgress, [0, 1], [0, -24])
 
   return (
-    <section ref={sectionRef} className="relative mb-8 h-[112vh] min-h-[980px]">
+    <section ref={sectionRef} className="relative mb-8 h-[92vh] min-h-[820px] sm:h-[112vh] sm:min-h-[980px]">
       <div className="sticky top-0 overflow-visible bg-transparent">
-        <div className="relative min-h-[920px] overflow-visible rounded-[32px]">
+        <div className="relative min-h-[760px] overflow-visible rounded-[32px] sm:min-h-[920px]">
           <motion.div
             style={{ backgroundPositionX: backgroundShift }}
             className="absolute inset-0 rounded-[32px] bg-[linear-gradient(180deg,rgba(95,127,126,0.96),rgba(86,117,116,0.98)),radial-gradient(circle_at_20%_12%,rgba(130,161,160,0.35),transparent_26%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.08),transparent_22%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0))] shadow-[0_32px_100px_rgba(61,75,80,0.16)]"
@@ -55,9 +55,9 @@ export function HeroScene() {
 
           <motion.div
             style={{ y: textParallax }}
-            className="relative z-10 flex h-full min-h-[920px] flex-col items-center justify-start px-6 pb-12 pt-14 text-center lg:px-12"
+            className="relative z-10 flex h-full min-h-[760px] flex-col items-center justify-start px-4 pb-10 pt-10 text-center sm:min-h-[920px] sm:px-6 sm:pb-12 sm:pt-14 lg:px-12"
           >
-            <div className="relative flex w-full flex-1 items-center justify-center overflow-visible pb-6 pt-16">
+            <div className="relative flex w-full flex-1 items-center justify-center overflow-visible pb-4 pt-12 sm:pb-6 sm:pt-16">
               <motion.div
                 style={{
                   scale: sweaterScale,
@@ -66,24 +66,24 @@ export function HeroScene() {
                   rotateZ: sweaterRotate,
                   rotateX: sweaterRotateX,
                 }}
-                className="relative w-full max-w-[620px] [perspective:1400px]"
+                className="relative w-full max-w-[520px] [perspective:1400px] sm:max-w-[620px]"
               >
                 <motion.div
                   style={{ opacity: blueprintGlow }}
                   className="absolute inset-x-[12%] top-[18%] h-[58%] rounded-full bg-[rgba(155,178,178,0.22)] blur-3xl"
                 />
-                <div className="relative rounded-[34px] border border-white/70 bg-[linear-gradient(180deg,rgba(255,252,247,0.62),rgba(255,250,243,0.22))] p-6 shadow-[0_32px_90px_rgba(61,75,80,0.08)] backdrop-blur-xl">
-                  <div className="absolute inset-4 rounded-[26px] border border-dashed border-[rgba(41,54,58,0.08)]" />
+                <div className="relative rounded-[34px] border border-white/70 bg-[linear-gradient(180deg,rgba(255,252,247,0.62),rgba(255,250,243,0.22))] p-4 shadow-[0_32px_90px_rgba(61,75,80,0.08)] backdrop-blur-xl sm:p-6">
+                  <div className="absolute inset-3 rounded-[22px] border border-dashed border-[rgba(41,54,58,0.08)] sm:inset-4 sm:rounded-[26px]" />
                   <motion.div style={{ opacity: blueprintLines }} className="relative">
                     <SweaterBlueprint />
                   </motion.div>
                 </div>
               </motion.div>
 
-              <div className="absolute top-[4%] z-20 w-full max-w-3xl px-6">
-                <div className="mx-auto max-w-2xl rounded-[28px] bg-[radial-gradient(circle_at_top,rgba(255,251,244,0.42),rgba(255,251,244,0.18)_50%,transparent_82%)] px-8 py-6">
+              <div className="absolute top-[3%] z-20 w-full max-w-3xl px-4 sm:top-[4%] sm:px-6">
+                <div className="mx-auto max-w-2xl rounded-[28px] bg-[radial-gradient(circle_at_top,rgba(255,251,244,0.42),rgba(255,251,244,0.18)_50%,transparent_82%)] px-4 py-5 sm:px-8 sm:py-6">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#f1dfc9]">{heroCopy.label}</p>
-                <h1 className="mt-3 font-display text-5xl leading-none text-[color:var(--color-ink)] sm:text-6xl">
+                <h1 className="mt-3 font-display text-[2.5rem] leading-[0.95] text-[color:var(--color-ink)] sm:text-6xl">
                   {heroCopy.title}
                 </h1>
                 </div>
@@ -94,7 +94,7 @@ export function HeroScene() {
             <motion.div
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-20 mt-44 grid w-full max-w-5xl gap-4 md:grid-cols-3"
+              className="relative z-20 mt-20 grid w-full max-w-5xl gap-4 sm:mt-44 md:grid-cols-3"
             >
               {transitionCards.map((card) => (
                 <motion.div

@@ -63,7 +63,7 @@ export function ShopPage() {
           </div>
         </div>
 
-        <div className="mb-6 flex items-center justify-between">
+        <div className="mb-6 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-[color:var(--color-ink-soft)]">{filteredProducts.length} styles available</p>
           <p className="text-sm text-[color:var(--color-ink-soft)]">Availability shown for delivery and select store pickup</p>
         </div>

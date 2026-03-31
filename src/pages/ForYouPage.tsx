@@ -75,7 +75,7 @@ export function ForYouPage() {
         <div className="grid gap-5 lg:grid-cols-[1.12fr,0.88fr]">
           <div className="overflow-hidden rounded-[32px] border border-white/70 bg-[linear-gradient(135deg,#42585d,#587072_52%,#b97d66)] p-6 text-white sm:p-8">
             <p className="text-xs uppercase tracking-[0.34em] text-[color:var(--color-gold-soft)]">For {user.firstName}</p>
-            <h1 className="mt-3 font-display text-5xl leading-none sm:text-6xl">Recommended for you, based on how you shop.</h1>
+            <h1 className="mt-3 font-display text-[2.6rem] leading-[0.95] sm:text-6xl">Recommended for you, based on how you shop.</h1>
             <p className="mt-5 max-w-2xl text-sm leading-7 text-white/74">{buildWeeklyStory(user)}</p>
             <div className="mt-8 flex flex-wrap gap-2">
               {user.favoriteStyles.map((tag) => (
@@ -98,7 +98,7 @@ export function ForYouPage() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--color-gold)]">Prompt Concierge</p>
-                <h2 className="mt-3 font-display text-4xl leading-none text-[color:var(--color-ink)]">
+                <h2 className="mt-3 font-display text-[2rem] leading-[0.95] text-[color:var(--color-ink)] sm:text-4xl">
                   Ask for a look, and RetailCo will search the inventory for it.
                 </h2>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-[color:var(--color-ink-soft)]">
@@ -156,7 +156,7 @@ export function ForYouPage() {
 
           <div className="rounded-[32px] border border-white/70 bg-[linear-gradient(180deg,rgba(67,89,94,0.98),rgba(46,62,66,0.96))] p-6 text-white sm:p-8">
             <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--color-gold-soft)]">Prompt Summary</p>
-            <h3 className="mt-3 font-display text-4xl leading-none">Interpreting your request</h3>
+            <h3 className="mt-3 font-display text-[2rem] leading-[0.95] sm:text-4xl">Interpreting your request</h3>
             <p className="mt-4 rounded-[24px] border border-white/10 bg-white/6 p-4 text-sm leading-7 text-white/84">
               {activePrompt}
             </p>
@@ -238,7 +238,7 @@ export function ForYouPage() {
                 <button
                   key={product.id}
                   onClick={() => setSelectedProduct(product)}
-                  className="flex w-full items-center gap-4 rounded-[24px] border border-white/70 bg-white/70 p-3 text-left"
+                  className="flex w-full items-center gap-3 rounded-[24px] border border-white/70 bg-white/70 p-3 text-left sm:gap-4"
                 >
                   <img src={product.image} alt={product.name} className="h-20 w-20 rounded-[18px] object-cover" />
                   <div className="min-w-0">
@@ -252,7 +252,7 @@ export function ForYouPage() {
 
           <div className="rounded-[32px] border border-white/70 bg-[linear-gradient(180deg,rgba(255,252,247,0.78),rgba(238,230,220,0.84))] p-6 sm:p-8">
             <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--color-gold)]">Curated For This Week</p>
-            <h2 className="mt-3 font-display text-4xl leading-none text-[color:var(--color-ink)]">Your week, translated into relevant outfits.</h2>
+            <h2 className="mt-3 font-display text-[2rem] leading-[0.95] text-[color:var(--color-ink)] sm:text-4xl">Your week, translated into relevant outfits.</h2>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               {[
                 {

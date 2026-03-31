@@ -93,7 +93,7 @@ export function HomePage() {
                 RetailCo
               </div>
               <div className="space-y-4">
-                <h1 className="mx-auto max-w-5xl font-display text-[3.8rem] leading-[0.9] tracking-[-0.05em] text-[color:var(--color-ink)] sm:text-[5.8rem]">
+                <h1 className="mx-auto max-w-5xl font-display text-[2.9rem] leading-[0.9] tracking-[-0.05em] text-[color:var(--color-ink)] sm:text-[5.8rem]">
                   Find what works for YOU.
                 </h1>
                 <p className="mx-auto max-w-2xl text-base leading-8 text-[color:var(--color-ink-soft)] sm:text-lg">
@@ -125,20 +125,20 @@ export function HomePage() {
                       key={product.id}
                       className="relative overflow-hidden"
                     >
-                      <img src={product.image} alt={product.name} className="h-[360px] w-full object-cover sm:h-[620px]" />
+                      <img src={product.image} alt={product.name} className="h-[320px] w-full object-cover sm:h-[620px]" />
                       <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_42%,rgba(41,54,58,0.36)_100%)]" />
                       {index === 1 ? (
-                        <div className="absolute inset-x-8 bottom-10 text-center text-white">
+                        <div className="absolute inset-x-5 bottom-8 text-center text-white sm:inset-x-8 sm:bottom-10">
                           <p className="text-xs uppercase tracking-[0.34em] text-white/72">{lifestyle.labels[index][0]}</p>
-                          <p className="mt-3 font-display text-[3.7rem] leading-[0.9] sm:text-[5.8rem]">
+                          <p className="mt-3 font-display text-[2.6rem] leading-[0.9] sm:text-[5.8rem]">
                             {lifestyle.labels[index][1]}
                           </p>
                           <p className="mt-3 text-sm uppercase tracking-[0.28em] text-white/70">{lifestyle.labels[index][2]}</p>
                         </div>
                       ) : (
-                        <div className="absolute inset-x-6 bottom-8 text-white">
+                        <div className="absolute inset-x-5 bottom-6 text-white sm:inset-x-6 sm:bottom-8">
                           <p className="text-xs uppercase tracking-[0.28em] text-white/72">{lifestyle.labels[index][0]}</p>
-                          <p className="mt-2 font-display text-4xl leading-none">{lifestyle.labels[index][1]}</p>
+                          <p className="mt-2 font-display text-[2rem] leading-none sm:text-4xl">{lifestyle.labels[index][1]}</p>
                         </div>
                       )}
                     </div>
@@ -183,21 +183,21 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="mt-40 px-4 pt-14 pb-14 sm:mt-44 sm:px-6 lg:px-8">
+      <section className="mt-28 px-4 pb-14 pt-14 sm:mt-44 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl space-y-8">
           <div className="grid gap-6 lg:grid-cols-[1.15fr,0.85fr] lg:items-center">
             <div className="relative overflow-hidden rounded-[34px] border border-[rgba(155,178,178,0.18)] shadow-[0_24px_70px_rgba(61,75,80,0.08)]">
               <img
                 src={featured[0].image}
                 alt={featured[0].name}
-                className="h-[520px] w-full object-cover sepia-[0.58] saturate-[0.52] brightness-[0.8] contrast-[0.92]"
+                className="h-[380px] w-full object-cover sepia-[0.58] saturate-[0.52] brightness-[0.8] contrast-[0.92] sm:h-[520px]"
               />
               <div className="absolute inset-0 bg-[rgba(108,84,62,0.34)] mix-blend-multiply" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(214,192,166,0.18),rgba(88,66,48,0.26))]" />
             </div>
             <div className="space-y-6 rounded-[32px] bg-[linear-gradient(180deg,rgba(255,248,241,0.82),rgba(232,222,212,0.78))] p-8 shadow-[0_20px_50px_rgba(61,75,80,0.06)]">
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold)]">New Arrivals</p>
-              <h2 className="font-display text-5xl leading-none text-[color:var(--color-ink)]">
+              <h2 className="font-display text-[2.4rem] leading-[0.95] text-[color:var(--color-ink)] sm:text-5xl">
                 Pieces for lighter days and easier dressing.
               </h2>
               <p className="max-w-md text-sm leading-8 text-[color:var(--color-ink-soft)]">
@@ -254,7 +254,7 @@ export function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.92fr,1.08fr] lg:items-end">
           <div className="space-y-5 rounded-[32px] bg-[linear-gradient(180deg,rgba(232,224,214,0.72),rgba(255,248,241,0.56))] p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold)]">This Week's Picks</p>
-            <h2 className="font-display text-5xl leading-none text-[color:var(--color-ink)]">
+            <h2 className="font-display text-[2.4rem] leading-[0.95] text-[color:var(--color-ink)] sm:text-5xl">
               A quieter edit of what customers are reaching for now.
             </h2>
             <p className="max-w-md text-sm leading-8 text-[color:var(--color-ink-soft)]">
@@ -280,11 +280,11 @@ export function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 lg:grid-cols-[1.05fr,0.95fr] lg:items-center">
             <div className="overflow-hidden rounded-[34px] border border-[rgba(216,184,171,0.18)] shadow-[0_24px_70px_rgba(61,75,80,0.08)]">
-              <img src={products[1].image} alt={products[1].name} className="h-[520px] w-full object-cover" />
+              <img src={products[1].image} alt={products[1].name} className="h-[380px] w-full object-cover sm:h-[520px]" />
             </div>
             <div className="space-y-6 rounded-[32px] bg-[linear-gradient(135deg,rgba(155,178,178,0.18),rgba(255,248,240,0.82)_38%,rgba(216,184,171,0.22))] p-8 shadow-[0_20px_50px_rgba(61,75,80,0.06)]">
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold)]">Based on Your Style</p>
-              <h2 className="font-display text-5xl leading-none text-[color:var(--color-ink)]">
+              <h2 className="font-display text-[2.4rem] leading-[0.95] text-[color:var(--color-ink)] sm:text-5xl">
                 Personalization should feel like good merchandising.
               </h2>
               <p className="max-w-lg text-sm leading-8 text-[color:var(--color-ink-soft)]">
@@ -306,12 +306,12 @@ export function HomePage() {
       <section className="px-4 pb-14 pt-10 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <LockedPreview />
-          <div className="mt-8 flex items-center justify-between px-1">
-            <div className="flex items-center gap-3">
+          <div className="mt-8 flex flex-col gap-4 px-1 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-start gap-3 sm:items-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[color:var(--color-ink)] text-white">
                 <Lock size={18} />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-sm font-semibold text-[color:var(--color-ink)]">Want a more personal feed?</p>
                 <p className="text-sm text-[color:var(--color-ink-soft)]">Unlock saved sizes, relevant products, and quieter recommendation moments in For You.</p>
               </div>
@@ -343,11 +343,11 @@ function EditorialTile({
 }) {
   return (
     <div className="relative overflow-hidden rounded-[32px] border border-[rgba(155,178,178,0.18)] shadow-[0_22px_60px_rgba(61,75,80,0.08)]">
-      <img src={image} alt={title} className="h-[460px] w-full object-cover" />
+      <img src={image} alt={title} className="h-[360px] w-full object-cover sm:h-[460px]" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_38%,rgba(41,54,58,0.4)_100%)]" />
-      <div className="absolute inset-x-8 bottom-8 text-white">
+      <div className="absolute inset-x-5 bottom-6 text-white sm:inset-x-8 sm:bottom-8">
         <p className="text-xs uppercase tracking-[0.34em] text-white/72">{eyebrow}</p>
-        <h3 className="mt-3 max-w-md font-display text-4xl leading-none">{title}</h3>
+        <h3 className="mt-3 max-w-md font-display text-[2rem] leading-[0.95] sm:text-4xl">{title}</h3>
         <Link to={to} className="btn-dark-secondary mt-5 px-5 py-3 text-sm font-semibold">
           {cta}
         </Link>
@@ -366,7 +366,7 @@ function MinimalProductTile({
   return (
     <button onClick={onClick} className="group text-left">
       <div className="overflow-hidden rounded-[28px] border border-[rgba(155,178,178,0.14)] bg-[linear-gradient(180deg,rgba(248,241,232,0.92),rgba(233,223,212,0.86))] shadow-[0_16px_40px_rgba(61,75,80,0.05)]">
-        <img src={product.image} alt={product.name} className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+        <img src={product.image} alt={product.name} className="h-[320px] w-full object-cover transition duration-500 group-hover:scale-[1.03] sm:h-[360px]" />
       </div>
       <div className="px-1 pt-4">
         <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[color:var(--color-ink-soft)]">{product.collection}</p>

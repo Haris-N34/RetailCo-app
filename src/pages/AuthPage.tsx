@@ -72,7 +72,7 @@ export function AuthPage() {
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.82fr,1.18fr]">
         <div className="rounded-[32px] border border-white/70 bg-[linear-gradient(180deg,#43595e,#546d70_58%,#b77d68)] p-6 text-white sm:p-8">
           <p className="text-xs uppercase tracking-[0.34em] text-[color:var(--color-gold-soft)]">Unlock your personalized experience</p>
-          <h1 className="mt-4 font-display text-5xl leading-none">A short setup for better recommendations from the start.</h1>
+          <h1 className="mt-4 font-display text-[2.5rem] leading-[0.95] sm:text-5xl">A short setup for better recommendations from the start.</h1>
           <p className="mt-5 max-w-md text-sm leading-7 text-white/74">
             RetailCo uses a few simple preference signals to personalize what you see, surface the right sizes, and make the For You page feel relevant immediately.
           </p>
@@ -100,16 +100,16 @@ export function AuthPage() {
         </div>
 
         <form onSubmit={onContinue} className="glass-panel rounded-[32px] border border-white/70 p-6 sm:p-8">
-          <div className="mb-8 flex items-center justify-between">
-            <div>
+          <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="min-w-0">
               <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--color-gold)]">Step {step + 1} / 4</p>
-              <h2 className="mt-3 font-display text-4xl leading-none text-[color:var(--color-ink)]">{stepTitle}</h2>
+              <h2 className="mt-3 font-display text-[2rem] leading-[0.95] text-[color:var(--color-ink)] sm:text-4xl">{stepTitle}</h2>
             </div>
             <div className="flex gap-2">
               {[0, 1, 2, 3].map((item) => (
                 <span
                   key={item}
-                  className={`h-2.5 w-10 rounded-full ${item <= step ? 'bg-[color:var(--color-ink)]' : 'bg-[color:var(--color-paper-2)]'}`}
+                  className={`h-2.5 w-8 rounded-full sm:w-10 ${item <= step ? 'bg-[color:var(--color-ink)]' : 'bg-[color:var(--color-paper-2)]'}`}
                 />
               ))}
             </div>
@@ -215,17 +215,17 @@ export function AuthPage() {
             </div>
           ) : null}
 
-          <div className="mt-8 flex items-center justify-between">
+          <div className="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between">
             <button
               type="button"
               onClick={() => setStep(Math.max(0, step - 1))}
-              className="btn-secondary px-5 py-3 text-sm font-semibold"
+              className="btn-secondary w-full px-5 py-3 text-sm font-semibold sm:w-auto"
             >
               Back
             </button>
             <button
               type="submit"
-              className="btn-primary px-6 py-3 text-sm font-semibold"
+              className="btn-primary w-full px-6 py-3 text-sm font-semibold sm:w-auto"
             >
               {step === 3 ? 'View Personalized Feed' : 'Continue'}
               <ArrowRight size={16} />

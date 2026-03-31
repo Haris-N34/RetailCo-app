@@ -7,7 +7,7 @@ export function LockedPreview() {
       <div className="relative grid gap-6 lg:grid-cols-[0.92fr,1.08fr]">
         <div className="space-y-5">
           <p className="text-xs uppercase tracking-[0.34em] text-[color:var(--color-gold-soft)]">Personalized access</p>
-          <h2 className="font-display text-4xl leading-none sm:text-5xl">Unlock a shopping feed designed around how you browse.</h2>
+          <h2 className="font-display text-[2rem] leading-[0.95] sm:text-5xl">Unlock a shopping feed designed around how you browse.</h2>
           <p className="max-w-md text-sm leading-7 text-white/72">
             Sign in to see recommendations based on your preferences, recent activity, saved sizes, and loyalty status across RetailCo.
           </p>

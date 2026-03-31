@@ -15,7 +15,7 @@ export function ProductModal({
 
   return (
     <div className="fixed inset-0 z-[60] flex items-end justify-center bg-[rgba(44,56,61,0.44)] p-4 backdrop-blur-md sm:items-center">
-      <div className="glass-panel w-full max-w-4xl overflow-hidden rounded-[32px] border border-white/70 bg-[color:var(--color-paper)]">
+      <div className="glass-panel max-h-[calc(100vh-2rem)] w-full max-w-4xl overflow-auto rounded-[28px] border border-white/70 bg-[color:var(--color-paper)] sm:rounded-[32px]">
         <div className="grid gap-0 sm:grid-cols-[1.05fr,0.95fr]">
           <div className="relative min-h-[300px]">
             <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
@@ -29,7 +29,7 @@ export function ProductModal({
           <div className="space-y-5 p-6 sm:p-8">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--color-gold)]">{product.collection}</p>
-              <h3 className="mt-3 font-display text-4xl leading-none text-[color:var(--color-ink)]">
+              <h3 className="mt-3 font-display text-[2rem] leading-[0.95] text-[color:var(--color-ink)] sm:text-4xl">
                 {product.name}
               </h3>
               <p className="mt-4 text-base leading-7 text-[color:var(--color-ink-soft)]">{product.description}</p>
@@ -41,7 +41,7 @@ export function ProductModal({
                 </span>
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-4 rounded-[24px] border border-white/70 bg-white/60 p-4">
+            <div className="grid gap-4 rounded-[24px] border border-white/70 bg-white/60 p-4 sm:grid-cols-2">
               <div>
                 <p className="text-xs uppercase tracking-[0.24em] text-[color:var(--color-ink-soft)]">Price</p>
                 <p className="mt-2 text-xl font-semibold text-[color:var(--color-ink)]">{formatPrice(product.price)}</p>
@@ -51,7 +51,7 @@ export function ProductModal({
                 <p className="mt-2 text-sm text-[color:var(--color-ink)]">{product.sizes.join(' • ')}</p>
               </div>
             </div>
-            <div className="flex gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row">
               <button
                 onClick={onAddToCart}
                 className="btn-primary flex-1 px-5 py-3.5 text-sm font-semibold"

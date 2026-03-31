@@ -15,7 +15,7 @@ export function SectionHeading({
         {eyebrow}
       </p>
       <div className={`space-y-3 ${centered ? 'mx-auto max-w-3xl' : 'max-w-2xl'}`}>
-        <h2 className="font-display text-4xl leading-none text-[color:var(--color-ink)] sm:text-5xl">
+        <h2 className="font-display text-[2rem] leading-[0.95] text-[color:var(--color-ink)] sm:text-5xl">
           {title}
         </h2>
         <p className={`text-sm leading-6 text-[color:var(--color-ink-soft)] sm:text-base ${centered ? 'mx-auto max-w-2xl' : 'max-w-xl'}`}>
