@@ -44,9 +44,9 @@ export function HeroScene() {
   const textParallax = useTransform(scrollYProgress, [0, 1], [0, -24])
 
   return (
-    <section ref={sectionRef} className="relative mb-8 h-[92vh] min-h-[820px] sm:h-[112vh] sm:min-h-[980px]">
-      <div className="sticky top-0 overflow-visible bg-transparent">
-        <div className="relative min-h-[760px] overflow-visible rounded-[32px] sm:min-h-[920px]">
+    <section ref={sectionRef} className="relative mb-8 h-auto sm:h-[112vh] sm:min-h-[980px]">
+      <div className="overflow-visible bg-transparent sm:sticky sm:top-0">
+        <div className="relative overflow-visible rounded-[32px] sm:min-h-[920px]">
           <motion.div
             style={{ backgroundPositionX: backgroundShift }}
             className="absolute inset-0 rounded-[32px] bg-[linear-gradient(180deg,rgba(95,127,126,0.96),rgba(86,117,116,0.98)),radial-gradient(circle_at_20%_12%,rgba(130,161,160,0.35),transparent_26%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.08),transparent_22%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0))] shadow-[0_32px_100px_rgba(61,75,80,0.16)]"
@@ -55,7 +55,7 @@ export function HeroScene() {
 
           <motion.div
             style={{ y: textParallax }}
-            className="relative z-10 flex h-full min-h-[760px] flex-col items-center justify-start px-4 pb-10 pt-10 text-center sm:min-h-[920px] sm:px-6 sm:pb-12 sm:pt-14 lg:px-12"
+            className="relative z-10 flex h-full flex-col items-center justify-start px-4 pb-14 pt-10 text-center sm:min-h-[920px] sm:px-6 sm:pb-12 sm:pt-14 lg:px-12"
           >
             <div className="relative flex w-full flex-1 items-center justify-center overflow-visible pb-4 pt-12 sm:pb-6 sm:pt-16">
               <motion.div
@@ -82,10 +82,10 @@ export function HeroScene() {
 
               <div className="absolute top-[3%] z-20 w-full max-w-3xl px-4 sm:top-[4%] sm:px-6">
                 <div className="mx-auto max-w-2xl rounded-[28px] bg-[radial-gradient(circle_at_top,rgba(255,251,244,0.42),rgba(255,251,244,0.18)_50%,transparent_82%)] px-4 py-5 sm:px-8 sm:py-6">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#f1dfc9]">{heroCopy.label}</p>
-                <h1 className="mt-3 font-display text-[2.5rem] leading-[0.95] text-[color:var(--color-ink)] sm:text-6xl">
-                  {heroCopy.title}
-                </h1>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#f1dfc9]">{heroCopy.label}</p>
+                  <h1 className="mt-3 font-display text-[2.5rem] leading-[0.95] text-[color:var(--color-ink)] sm:text-6xl">
+                    {heroCopy.title}
+                  </h1>
                 </div>
               </div>
 
