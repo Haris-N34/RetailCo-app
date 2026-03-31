@@ -94,11 +94,35 @@ export const useRetailStore = create<RetailState>()(
     }),
     {
       name: 'retailco-app-state',
+      version: 2,
       partialize: (state) => ({
         favorites: state.favorites,
         recentlyViewed: state.recentlyViewed,
         cartCount: state.cartCount,
       }),
+      migrate: (persistedState) => {
+        const state = persistedState as Partial<RetailState> | undefined
+
+        return {
+          ...state,
+          user: null,
+          isAuthenticated: false,
+          signUpDraft: null,
+        } as RetailState
+      },
+      merge: (persistedState, currentState) => {
+        const state = persistedState as Partial<RetailState> | undefined
+
+        return {
+          ...currentState,
+          favorites: state?.favorites ?? currentState.favorites,
+          recentlyViewed: state?.recentlyViewed ?? currentState.recentlyViewed,
+          cartCount: state?.cartCount ?? currentState.cartCount,
+          user: null,
+          isAuthenticated: false,
+          signUpDraft: null,
+        }
+      },
     },
   ),
 )
